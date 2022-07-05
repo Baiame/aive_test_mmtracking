@@ -21,13 +21,19 @@ Have `make` installed. For example using `brew`:
 )
 brew install make
 ```
+
 Install requirements:
 Follow the tutorial here: [MMTRACKING installation](https://github.com/Baiame/mmtracking/blob/master/docs/en/install.md)
-
-Sometimes the environment is not properly activated. Try to run:
-
-```bash
-conda activate aive
+The folder architecture should be:
+```
+.
+├── Makefile
+├── Readme.md
+├── demo
+├── input_videos
+├── mmcv
+├── mmtracking
+└── output_videos
 ```
 
 ### Models
@@ -45,7 +51,7 @@ make run-hd
 Otherwise, you can use the following command:
 
 ```bash
-	python ./demo/demo_vid.py \
+python ./demo/demo_vid.py \
     <MODEL_CONFIG>  \
     --input <INPUT_VIDEO> \
     --checkpoint <MODEL>  \
